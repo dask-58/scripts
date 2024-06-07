@@ -1,38 +1,3 @@
-
-/*
-    ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠛⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-    ⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-    ⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-    ⣿⣿⣿⣿⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-    ⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⢀⣀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-    ⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⢀⠠⠄⠀⠀⠈⠀⠀⠀⠀⠀⠀⠊⠨⠀⢄⠀⠀⠙⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-    ⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣄⠔⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠀⠈⠻⣿⣿⣿⣿⣿⣿⣿
-    ⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠆⠂⠀⠀⠀⠀⠀⣠⣄⢰⡆⢷⡘⣷⡆⢦⠰⣄⢠⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⣿⣿⣿⣿
-    ⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠂⠉⠀⠀⠀⠀⠀⣰⢃⣾⣿⣿⡌⢷⠸⣷⡘⣿⡌⢇⢻⡄⢿⣎⢲⣄⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣿⣿⣿
-    ⠀⠀⠀⠀⠀⠀⠀⠀⡠⠋⠀⠀⠀⠀⣠⡄⣼⢠⠃⣾⣿⣿⣿⣷⡘⡆⢻⣷⡌⢿⡌⠀⢿⡘⣿⡆⠿⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿
-    ⠀⠀⠀⠀⠀⠀⡠⠊⠀⠀⠀⠀⣠⢀⣿⢠⡇⡎⣼⣿⣿⣿⣿⣿⣷⡔⠘⣿⣿⣦⠻⡌⠈⢷⡘⣷⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿
-    ⡇⠀⠀⠀⢀⠈⠁⠀⠀⠀⠀⣸⣿⢸⡏⠸⠐⢰⣿⣿⣿⣿⣿⣿⣿⣿⣦⣘⣿⣿⣷⣄⠀⠀⢳⡘⡆⠈⣿⠰⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹
-    ⣇⠀⠀⡠⠂⠀⠀⠀⠀⢠⢁⣿⣿⢸⡇⡆⢀⠿⠿⠿⠛⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⠟⣂⡀⠀⢳⠠⠀⣿⡀⡆⠀⠀⠀⠀⠀⠀⠀⠀⣼
-    ⣿⠀⠀⠀⠀⠀⠀⠀⢀⠎⣼⡟⠠⢸⡇⠀⣰⣶⣿⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⢋⣵⣿⣿⣷⣦⠀⠁⠀⣿⡇⠇⠀⠀⠀⠀⠀⠀⠀⣰⣿
-    ⣿⠁⠀⠀⠀⠀⠀⠀⠌⣼⠟⢀⠀⠀⡇⡆⣿⡿⠋⠉⠉⠡⢿⣿⣿⣿⣿⣿⠃⣾⡿⠋⠉⠠⠍⠡⠵⡀⣿⡇⠀⠀⠀⠀⠀⠀⠀⣴⣿⣿
-    ⠃⠀⠀⠀⠀⠀⠀⢀⠚⡣⢠⢊⠀⡄⠀⠗⣠⠘⠁⢀⣀⣈⣹⣿⣿⣿⣿⣿⢸⣿⠎⣀⣤⣤⡀⢁⣶⡇⣿⡇⠀⠀⠀⠀⠀⣠⣾⣿⣿⣿
-    ⠀⠀⠀⠀⠀⠀⠀⡿⢡⡀⢡⢇⠀⣷⡀⡾⠁⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠿⣿⣿⣿⣿⣿⣿⣿⠀⣿⠁⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿
-    ⠀⠀⠀⠀⠀⠀⠀⡇⢸⢨⠂⡸⠀⢹⣿⣷⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢃⣴⣿⣿⣿⣿⣿⣿⡇⢠⡏⠀⣀⣴⣿⣿⣿⣿⣿⣿⣿⣿
-    ⠀⠀⠀⠀⠀⠀⠀⠁⠘⣆⠃⠱⡀⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡷⠿⠿⠿⢿⣿⣿⣿⣿⠀⡼⠀⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-    ⠀⠀⠀⠀⠀⠀⠀⠀⠠⡹⣄⡃⠉⢄⠘⣿⣿⣿⣿⣿⣿⣆⠠⢤⣤⣴⠶⠶⠒⠛⢀⣿⣿⣿⣿⠇⣸⠃⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-    ⣧⡀⠀⠀⠀⠀⠀⠀⠀⠈⠢⢍⣑⠒⠄⠘⢿⣿⣿⣿⣿⣿⣷⣄⠠⢤⣤⣤⠀⣠⣿⣿⣿⡿⠋⢠⠃⢠⣄⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-    ⣿⣿⣦⣀⡀⠀⠀⠀⠀⠀⠀⠐⠨⢅⡚⡀⢤⠙⠻⢿⣿⣿⣿⣿⣿⡶⠤⠤⢊⣿⣿⡿⠛⠁⢀⠂⠀⠲⣌⠳⣦⣈⠛⢿⣿⣿⣿⣿⣿⣿
-    ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣦⣍⡈⠀⠀⠀⠈⠉⠛⠛⠿⠿⣿⣿⠿⠟⠋⠀⠀⡠⠁⡀⡄⣷⣌⢳⣌⠻⣿⣦⣄⡉⠫⠯⠉⠍
-    ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⣋⣥⠖⠂⠀⠀⢦⣀⠀⠠⠁⠀⠀⠀⠀⠀⠀⠀⣰⠄⢐⠳⡐⠘⠿⠢⠙⢷⠙⣿⣿⣿⣦⡙⢧⣴
-    ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣫⣴⡿⠋⣱⣿⠃⡇⠀⠈⣿⣧⣤⣤⡀⠀⠀⠀⣄⠆⡼⠋⣼⣿⣷⣤⣴⣿⣿⡗⠀⢇⠙⢿⣿⣿⣿⡆⢻
-    ⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⣴⣿⢏⠄⣴⣿⡟⡘⠐⡀⣄⢸⣿⣿⣿⣿⣿⡶⠀⢃⡾⠱⢀⣿⣿⣿⣿⣿⣿⠏⣴⡄⡌⣆⠈⢿⣿⣿⣿⠈
-    ⣿⣿⣿⣿⣿⣿⣿⣿⠃⣾⣿⢣⠎⣼⣿⡿⠀⠀⠐⠰⠿⢸⣿⣿⣿⡿⢋⣶⣿⣶⣤⣴⣿⡿⠛⠛⠋⠉⠁⠨⣽⣇⠰⢸⡄⠘⣿⣿⡿⠀
-    ⣿⣿⣿⣿⣿⣿⣿⠃⣼⣿⠃⠎⣼⣿⠟⢀⡾⢠⣴⠿⠃⢸⣿⣿⣿⡀⠻⣿⣿⣿⡿⠟⠉⣠⣶⣶⣾⣷⣶⣄⡀⠙⠀⡘⡇⡇⣿⡿⣡⢱
-    ⣿⣿⣿⣿⣿⣿⡏⢰⣿⣿⠀⢸⣿⠏⣴⣿⣷⡆⠁⠀⠀⣿⣿⣿⡿⢃⣼⣿⡿⠋⠄⣡⣾⣿⣿⣿⣿⣿⣿⣿⣿⣆⠀⠌⢀⠀⡿⢡⡟⣿
-    ⣿⣿⣿⣿⣿⡿⢁⢸⣿⣿⡆⢈⢻⠸⢛⣉⣩⠂⠀⠀⣴⣿⣿⣿⡦⢸⡿⡋⠈⠌⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣆⠀⠉⢸⡇⣿⢹⣿
-    ⣿⣿⣿⣿⣿⢱⢃⡄⢻⣿⣿⠈⡆⠃⢾⣿⡏⠀⠀⣼⣿⣿⠟⣫⡴⢋⠀⡃⠈⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠄⣿⡅⣿⠸⣿
-*/
-
 #pragma GCC optimize("O3,unroll-loops")
 #include <bits/stdc++.h>
 
@@ -41,11 +6,9 @@ using namespace chrono;
 
 #define pi 3.1415926535897932384626433832795
 #define int long long
-#define fastio() ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL)
 constexpr int MOD = 1e9 + 7;
 #define INF 1e18
 #define all(x) begin(x), end(x)
-#define itn int
 
 #ifndef leomessi
 #define debug(x) cerr << #x<<" "; __print(x); cerr << '\n';
@@ -78,70 +41,59 @@ template <class T, class V> void __print(map <T, V> v) {cerr << "[ "; for (auto 
 
 
 template<typename T>
-void time(T&& func) {
-    auto start = std::chrono::high_resolution_clock::now();
+void Zeit(T&& func) {
+    auto start = chrono::high_resolution_clock::now();
     func();
-    auto end = std::chrono::high_resolution_clock::now();
-    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
-    std::cout << "\nExecution time: " << fixed << static_cast<double>(duration.count()) / 1000000.00 << " seconds" << std::endl;
+    auto end = chrono::high_resolution_clock::now();
+    auto duration = chrono::duration_cast<std::chrono::microseconds>(end - start);
+    cout << "\nExecution time: " << fixed << static_cast<double>(duration.count()) / 1000000.00 << " seconds" << '\n';
 }
 
-vector<int> sieve(int n) {
-    int *arr = new int[n + 1](); 
-    vector<int> vect; 
-    for (int i = 2; i <= n; i++)
-        if (arr[i] == 0) {
-            vect.push_back(i); 
-            for (int j = 2 * i; j <= n; j += i)
-                arr[j] = 1;
-        } 
+template <typename T>
+// usage vector<int> primes = sieve<int>(100)
+vector<T> sieve(T n) {
+    vector<bool> arr(n + 1, true); 
+    vector<T> vect;
+    arr[0] = arr[1] = false;
+    for (T i = 2; i <= n; i++) {
+        if (arr[i]) {
+            vect.push_back(i);
+            for (T j = i * i; j <= n; j += i) {
+                arr[j] = false;
+            }
+        }
+    }
     return vect;
 }
 
-int C(int n, int r) {
-    int ans = 1LL;
+template <typename T>
+// usage int res = C<int>(10, 5)
+T C(T n, T r) { 
+    T ans = 1;
     r = (r > n - r) ? n - r : r;
-    for (int i = 1; i <= r; i++, n--) {
-        ans = ans * n / i;
-    }
+    for (T i = 1; i <= r; i++, n--) ans = ans * n / i;
     return ans;
 }
 
-
-//mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
-
-void pre() {
-    
-  return;
-}
-
+mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
 void leo() {
     
 }
 
-signed main() {
+int32_t main() {
 #ifndef leomessi
     freopen("Error.txt", "w", stderr);
 #endif
-    fastio();
-    pre();
-    int t; cin >> t; while (t--)
-    leo();
 
-    /* auto start1 = high_resolution_clock::now();
-    auto stop1 = high_resolution_clock::now();
-    auto duration = duration_cast<microseconds>(stop1 - start1); */
+  int t; cin >> t; while (t-- > 0)
+  leo();
+  
+  auto lam = []() {
+    this_thread::sleep_for(chrono::seconds(1));
+  };
 
-     auto myLambda = []() {
-        std::this_thread::sleep_for(std::chrono::seconds(1));
-    };
+   //Zeit(lam);
 
-    //time(myLambda);
-
-    
   return 0;
 }
-
-
-
